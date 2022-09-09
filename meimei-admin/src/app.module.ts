@@ -18,6 +18,7 @@ import { OnlineModule } from './modules/monitor/online/online.module';
 import { JobModule } from './modules/monitor/job/job.module';
 import { ServerModule } from './modules/monitor/server/server.module';
 import { JobService } from './modules/monitor/job/job.service';
+import { ProjectModule } from './modules/project/project.module';
 
 /* 将 provider的类名作为别名，方便定时器调用 */
 const providers = [JobService]
@@ -59,7 +60,8 @@ const aliasProviders = createAliasProviders();
     LogModule,
     OnlineModule,
     JobModule,
-    ServerModule
+    ServerModule,
+    ProjectModule
   ],
   providers: [...aliasProviders]
 })

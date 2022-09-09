@@ -16,11 +16,11 @@ export default defineConfig({
   // typeorm 配置
   database: {
     type: 'mysql',
-    host: process.env.MYSQL_HOST || '42.192.136.154',
+    host: process.env.MYSQL_HOST || 'localhost',
     port: process.env.MYSQL_PORT || 3306,
-    username: process.env.MYSQL_USERNAME || 'mei-mei-dev',
-    password: process.env.MYSQL_PASSWORD || 'y3xxKRAmamMGTk3s',
-    database: process.env.MYSQL_DATABASE || 'mei-mei-dev',
+    username: process.env.MYSQL_USERNAME || 'test',
+    password: process.env.MYSQL_PASSWORD || '123456',
+    database: process.env.MYSQL_DATABASE || 'mei_mei_dev',
     autoLoadModels: true,
     synchronize: true,
     logging: false,
@@ -28,7 +28,7 @@ export default defineConfig({
   // redis 配置
   redis: {
     config: {
-      url: 'redis://:123456@localhost:6379/0'
+      url: 'redis://localhost:6379/0'
     }
   },
 
@@ -36,7 +36,7 @@ export default defineConfig({
   bullRedis: {
     host: 'localhost',
     port: '6379',
-    password: '123456'
+    password: ''
   },
 
   isDemoEnvironment: false,
